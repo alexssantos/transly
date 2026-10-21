@@ -106,6 +106,8 @@
     .older summary { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; }
     .older summary small { color: var(--text-2); font-weight: 400; }
     .older .files { margin-top: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .plat .howto { margin: 12px 0 0; color: var(--text-2); font-size: 13px; line-height: 1.5; }
+    .plat .howto code { font-size: 12px; padding: 1px 5px; border-radius: 6px; background: rgba(255,255,255,.08); word-break: break-all; }
     .dl-note { margin: 18px 0 0; color: var(--text-2); font-size: 14px; }
     .dl-note a { color: var(--lime); }
     footer { padding: 40px 0 56px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; }
@@ -230,8 +232,8 @@
           <span class="meta" id="dl-meta">Buscando a última versão…</span>
         </div>
         <div class="plats" id="dl-plats">
-          <div class="plat" data-os="windows"><h3>Windows</h3><p class="req">Windows 10 ou mais novo, 64 bits</p><div class="files"></div></div>
-          <div class="plat" data-os="mac"><h3>macOS</h3><p class="req">macOS 12 ou mais novo</p><div class="files"></div></div>
+          <div class="plat" data-os="windows"><h3>Windows</h3><p class="req">Windows 10 ou mais novo, 64 bits</p><div class="files"></div><p class="howto">Se aparecer "O Windows protegeu o computador", clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>.</p></div>
+          <div class="plat" data-os="mac"><h3>macOS</h3><p class="req">macOS 12 ou mais novo</p><div class="files"></div><p class="howto">Arraste o Transly para Aplicativos. Se o macOS não deixar abrir, vá em <b>Ajustes do Sistema → Privacidade e Segurança → Abrir Mesmo Assim</b>, ou rode no Terminal <code>xattr -cr /Applications/Transly.app</code>.</p></div>
           <div class="plat" data-os="linux"><h3>Linux</h3><p class="req">x86_64; AppImage roda em qualquer distribuição</p><div class="files"></div></div>
         </div>
         <div class="older" id="dl-older" hidden>
@@ -247,6 +249,7 @@
         <div class="faq">
           <details><summary>Como ativo o Pro depois de comprar?</summary><p>A chave chega no seu e-mail. No Transly, abra Ajustes → Plano, cole a chave e clique em Ativar.</p></details>
           <details><summary>O que acontece com o que eu copio?</summary><p>O Transly detecta o idioma no seu computador. Texto que já está no idioma de destino é ignorado e não sai da máquina; o resto vai para o serviço de tradução e não fica guardado em lugar nenhum além do seu Histórico. Desligue "Traduzir ao copiar" para a bolha parar de olhar a área de transferência.</p></details>
+          <details><summary>Por que o sistema avisa ao instalar?</summary><p>O Transly ainda não tem os certificados pagos da Apple e da Microsoft, então o Windows e o macOS não reconhecem quem publicou o app e pedem uma confirmação. No Windows, clique em Mais informações → Executar assim mesmo. No macOS, use Ajustes do Sistema → Privacidade e Segurança → Abrir Mesmo Assim (ou <code>xattr -cr /Applications/Transly.app</code> no Terminal). Isso só acontece na primeira instalação: as atualizações seguintes chegam sozinhas, assinadas e verificadas pelo próprio app.</p></details>
           <details><summary>Funciona sem internet?</summary><p>A tradução precisa de internet. O Histórico, os favoritos e o Pro (por até 30 dias) continuam funcionando offline.</p></details>
           <details><summary>Posso usar em mais de um computador?</summary><p>Sim, a chave do Pro ativa até 3 computadores. Para trocar de máquina, use "Desativar nesta máquina" em Ajustes → Plano.</p></details>
         </div>
